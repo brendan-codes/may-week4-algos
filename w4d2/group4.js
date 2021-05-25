@@ -33,11 +33,18 @@ if(S.length !== T.length){
   return false;
 } else {
   for(var i = 0; i<S.length; i++){
-    for(var j=i; j<T.length; j++){
-
+    if(S[i] ==='#') {
+      S=S.slice(0, S.length-1);
+    }
+    if(T[i]==='#'){
+      T=T.slice(0, T.lenght-1);
+    }else {
+      S +=S[i];
+      T+=T[i];
     }
   }
 }
+console.log(S, T);
 }
 
 /*
