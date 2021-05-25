@@ -22,6 +22,8 @@
   What is it about a string that makes it possible for it to be a palindrome?
 */
 
+
+
 const str1 = "aabbccdde";
 const expected1 = true;
 

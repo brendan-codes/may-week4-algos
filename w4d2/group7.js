@@ -46,6 +46,7 @@ function backStringCompare(strs, strt) {
 
   for (let i = slength-1; i < slength; i--) {
     if (strs[i] !== "#") {
+      console.log(strs[i]);
       sArr.push(strs[i])
     } else {
       i--;
@@ -67,7 +68,6 @@ function backStringCompare(strs, strt) {
     } else {
       return false;
     }
-  }
 }
 
 console.log(backStringCompare(strs1, strt1));
