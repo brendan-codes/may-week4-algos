@@ -80,6 +80,7 @@ function canBuildS1FromS2(neededStr, availableStr) {
     for (const availableChar of availableStr) {
         const availableCharLower = availableChar.toLowerCase();
 
+        // O(1)
         if (availableHash.hasOwnProperty(availableCharLower) === false) {
             availableHash[availableCharLower] = 1;
         } else {

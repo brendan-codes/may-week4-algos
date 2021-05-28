@@ -50,6 +50,16 @@ function string1FromString2 (s1, s2) {
     return false;
   }
 
+  let obj = {}
+
+  for(var i = 0; i < s1.length; i++) {
+    var key = s1[i]
+    if(obj[key] === undefined) {
+      obj[key] = 1
+    } else {
+      obj[key] += 1;
+    }
+  }
 
 
 

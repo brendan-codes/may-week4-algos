@@ -25,7 +25,16 @@
   Output: true
   Explanation: Both S and T become "c"
 */
-backspaceStringCompare(){
+function backspaceCompare(str1, str2){
+  //what if strigns are diff lengths
+  for(let i = 0; i < str1.length; i++){
+    if(str1[i] === str2[i]){
+      //nothing
+    }else if(str1[i] === "#" === str2[i] ){
+      //nothing
+    }else if()
+
+  }
 
 }
 

@@ -29,13 +29,42 @@
   const S1 = "ab#c";
   const T1 = "ad#c";
   const expected1 = true;
+  const S2 = "ab##";
+  const T2 = "c#d#";
+  const expected2 = true;
+  const S3 = "a##c";
+  const T3 = "#a#c";
+  const expected3 = true;
 function backspaceStringCompare(str1, str2) {
   let i = 0;
   let j = 0;
-  while(i != str1.length && j != str2.length){
-    if(str1[i] != str2[j] && str1)
+  while(i != str1.length-1 && j != str2.length-1){
+    if(i == '#') {
+      i++;
+    }
+    if(j == '#') {
+      j++;
+    }
+    if(str1[i] == str2[j]) {
+      i++;
+      j++;
+    } else if(str1[i] != str2[j]) {
+      if(str1[i+1] == '#') {
+        i += 2;
+      } else if(str2[j+1] == '#') {
+        j+=2;
+      } else {
+        return false;
+      }
+    }
+  }
+  if(str1[str1.length-1] == str2[str2.length-1]){
+    return true;
+  } else {
+    return false;
   }
 }
+console.log(backspaceStringCompare(S1, T1));
 
 /*
     CAN STRING ONE BE MADE FROM STRING TWO

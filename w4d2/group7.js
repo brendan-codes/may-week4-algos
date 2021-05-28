@@ -44,26 +44,27 @@ function backStringCompare(strs, strt) {
   let sArr = [];
   let tArr = [];
 
-  for (let i = slength-1; i < slength; i--) {
+  for (let i = slength-1; i >= 0; i--) {
     if (strs[i] !== "#") {
-      console.log(strs[i]);
       sArr.push(strs[i])
     } else {
-      i--;
+        i--;
+        continue;
     }
     console.log(sArr);
   }
 
-  for (let j = tlength-1; j < tlength; j--) {
-    if (strt[i] !== "#") {
-      tArr.push(strt[i])
+  for (let j = tlength-1; j >= 0; j--) {
+    if (strt[j] !== "#") {
+      tArr.push(strt[j])
     } else {
       j--;
+      continue;
     }
     console.log(tArr);
   }
 
-    if (sArr === tArr) {
+    if (sArr == tArr) {
       return true;
     } else {
       return false;
@@ -71,6 +72,8 @@ function backStringCompare(strs, strt) {
 }
 
 console.log(backStringCompare(strs1, strt1));
+console.log(backStringCompare(strs2, strt2));
+console.log(backStringCompare(strs3, strt3));
 
 /*
     CAN STRING ONE BE MADE FROM STRING TWO

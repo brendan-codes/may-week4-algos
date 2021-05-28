@@ -29,7 +29,9 @@ function BackStrComp(S,T){
   if(S == T){
     return true
   }
-
+  for (let i = 0; i < S.length; i++) {
+    
+  }
 }
 
 /*
